@@ -2,6 +2,19 @@ import "./App.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
+function App() {
+  const navigate = useNavigate();
+
+  return (
+    <Wrapper>
+      <Title onClick={() => navigate("/")}>숙멋 프론트의 TMI 게시판 🦁</Title>
+      <Outlet />
+    </Wrapper>
+  );
+}
+
+export default App;
+
 const Wrapper = styled.div`
   padding: 80px 100px;
   width: 100%;
@@ -15,18 +28,3 @@ const Title = styled.div`
   font-weight: bolder;
   cursor: pointer;
 `;
-
-function App() {
-  const navigate = useNavigate();
-
-  return (
-    <>
-      <Wrapper>
-        <Title onClick={() => navigate("/")}>숙멋 프론트의 TMI 게시판 🦁</Title>
-        <Outlet />
-      </Wrapper>
-    </>
-  );
-}
-
-export default App;

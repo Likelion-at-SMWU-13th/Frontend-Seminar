@@ -7,7 +7,7 @@ const CommentPage = () => {
   const navigate = useNavigate();
   return (
     <Wrapper>
-      <Button txt={"방명록 작성하기"} onBtnClick={() => navigate("/write")} />
+      <Button txt={"게시글 작성하기"} onBtnClick={() => navigate("/write")} />
       <CommentWrapper>
         <Comment />
       </CommentWrapper>

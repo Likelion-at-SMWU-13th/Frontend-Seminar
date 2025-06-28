@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-const MOCK_TMI_DATA = [
+const MOCK_COMMENTS = [
   {
     id: "1",
     author: "박세은",
@@ -50,11 +50,11 @@ const MOCK_TMI_DATA = [
 
 const Comment = () => {
   const navigate = useNavigate();
-  const [tmiData] = useState(MOCK_TMI_DATA);
+  const [comments] = useState(MOCK_COMMENTS);
 
   return (
     <>
-      {tmiData.map((comment) => (
+      {comments.map((comment) => (
         <CommentContainer
           key={comment.id}
           onClick={() => navigate(`/comment/${comment.id}`)}

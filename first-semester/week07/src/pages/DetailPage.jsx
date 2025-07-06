@@ -6,14 +6,14 @@ const DetailPage = () => {
   const navigate = useNavigate();
   return (
     <Wrapper>
-      <Button txt={"게시글 작성하기"} onBtnClick={() => navigate("/write")} />
+      <Button txt="게시글 작성하기" onBtnClick={() => navigate("/write")} />
       <DetailWrapper>
         <Author>성윤정</Author>
         <Time>2025-06-25T22:54:21Z</Time>
         <Comment>하이</Comment>
         <BtnWrapper>
-          <Button txt={"수정"} fontSize={"30px"} />
-          <Button txt={"삭제"} fontSize={"30px"} />
+          <Button txt="수정" fontSize="30px" />
+          <Button txt="삭제" fontSize="30px" />
         </BtnWrapper>
       </DetailWrapper>
     </Wrapper>

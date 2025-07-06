@@ -31,7 +31,7 @@ const WritePage = () => {
         />
       </FormGroup>
       <BtnWrapper>
-        <Button txt={"작성하기"} />
+        <Button txt="작성하기" />
       </BtnWrapper>
     </Wrapper>
   );

@@ -18,10 +18,10 @@ const CommentPage = () => {
 export default CommentPage;
 
 const Wrapper = styled.div`
-  margin-top: 20px;
+  margin-top: 1.25rem;
 `;
 const CommentWrapper = styled.div`
-  margin-top: 50px;
+  margin-top: 3.125rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;

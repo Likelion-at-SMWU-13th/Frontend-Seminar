@@ -11,14 +11,14 @@ const Button = ({ txt, onBtnClick, fontSize }) => {
 export default Button;
 
 const ButtonContainer = styled.button`
-  padding: 15px 40px;
+  padding: 0.9375rem 2.5rem;
   background-color: var(--text-black);
-  border-radius: 30px;
+  border-radius: 1.875rem;
   border: none;
   color: white;
   font-weight: 700;
   /* cursor: pointer; */
-  font-size: ${(props) => props.fontSize || "20px"};
+  font-size: ${(props) => props.fontSize || "1.25rem"};
   &:hover {
     background-color: var(--main-orange);
   }

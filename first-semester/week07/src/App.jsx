@@ -16,7 +16,7 @@ function App() {
 export default App;
 
 const Wrapper = styled.div`
-  padding: 80px 100px;
+  padding: 5rem 6.25rem;
   width: 100%;
   min-height: 100dvh;
   background-color: var(--bg-grey);
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
   color: var(--text-black);
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: bolder;
   cursor: pointer;
 `;

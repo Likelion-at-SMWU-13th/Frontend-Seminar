@@ -40,21 +40,21 @@ const WritePage = () => {
 export default WritePage;
 
 const Wrapper = styled.div`
-  margin-top: 50px;
+  margin-top: 3.125rem;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.875rem;
 `;
 
 const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 `;
 
 const InputLabel = styled.div`
   color: var(--text-black);
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 700;
 `;
 
@@ -62,11 +62,11 @@ const StyledInput = styled.input`
   border: none;
   outline: none;
   background-color: white;
-  padding: 10px 30px;
-  border-radius: 15px;
-  width: 300px;
-  height: 50px;
-  font-size: 18px;
+  padding: 0.625rem 1.875rem;
+  border-radius: 0.9375rem;
+  width: 18.75rem;
+  height: 3.125rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--text-black);
   &::placeholder {
@@ -79,11 +79,11 @@ const StyledTxtarea = styled.textarea`
   border: none;
   outline: none;
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
   background-color: white;
-  padding: 30px;
-  border-radius: 15px;
-  font-size: 18px;
+  padding: 1.875rem;
+  border-radius: 0.9375rem;
+  font-size: 1.125rem;
   font-weight: 700;
   resize: none;
   color: var(--text-black);

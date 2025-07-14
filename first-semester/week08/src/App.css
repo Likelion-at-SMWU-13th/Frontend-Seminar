@@ -42,3 +42,12 @@ button {
 button > img {
   width: 100%;
 }
+
+.profile-image-div {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -154,12 +154,38 @@ export const Check = styled.label`
     border-radius: 6px;
     border: 2px solid #cbd5e1;
     transition: all 0.2s ease;
+    background: #fff;
+    display: grid;
+    place-items: center;
+  }
+
+  input:focus-visible + span {
+    box-shadow: 0 0 0 4px rgba(86, 114, 255, 0.12);
+    border-color: #5672ff;
   }
 
   input:checked + span {
     background: #5b79ff;
     border-color: #5b79ff;
     box-shadow: 0 0 0 4px rgba(91, 121, 255, 0.15) inset;
+  }
+
+  span::after {
+    content: "";
+    width: 3px;
+    height: 6px;
+    border-right: 1.5px solid transparent;
+    border-bottom: 1.5px solid transparent;
+    transform: rotate(45deg) scale(0.85);
+    transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+    opacity: 0;
+  }
+
+  input:checked + span::after {
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
   }
 `;
 

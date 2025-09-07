@@ -39,7 +39,7 @@ function App() {
 
           <S.List>
             {todos.length === 0 ? (
-              <S.Empty>할 일이 없어요. 오늘 하나 추가해볼까요?</S.Empty>
+              <S.Empty>할 일이 없어요. 빨리 추가해봅시다!!!</S.Empty>
             ) : (
               todos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
             )}

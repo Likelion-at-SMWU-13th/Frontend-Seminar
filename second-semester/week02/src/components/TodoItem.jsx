@@ -1,8 +1,8 @@
 import useTodoStore from "../store/store";
 
 function TodoItem({ todo }) {
-  const removeTodoSelector = useTodoStore((s) => s.removeTodo);
-  const toggleTodoSelector = useTodoStore((s) => s.toggleTodo);
+  const removeTodo = useTodoStore((s) => s.removeTodo);
+  const toggleTodo = useTodoStore((s) => s.toggleTodo);
 
   return (
     <li className="todo-item">
@@ -10,7 +10,7 @@ function TodoItem({ todo }) {
         <input
           type="checkbox"
           checked={todo.completed}
-          onChange={() => toggleTodoSelector(todo.id)}
+          onChange={() => toggleTodo(todo.id)}
         />
         <span className="checkmark" />
       </label>
@@ -19,12 +19,8 @@ function TodoItem({ todo }) {
         {todo.title}
       </span>
 
-      <button
-        className="btn delete"
-        onClick={() => removeTodoSelector(todo.id)}
-        title="삭제"
-      >
-        Delete
+      <button className="btn delete" onClick={() => removeTodo(todo.id)}>
+        삭제
       </button>
     </li>
   );

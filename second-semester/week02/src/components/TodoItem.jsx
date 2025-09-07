@@ -1,28 +1,33 @@
 import useTodoStore from "../store/store";
+import * as S from "../styles/styled";
 
 function TodoItem({ todo }) {
   const removeTodo = useTodoStore((s) => s.removeTodo);
   const toggleTodo = useTodoStore((s) => s.toggleTodo);
 
   return (
-    <li className="todo-item">
-      <label className="todo-check">
+    <S.ItemRow>
+      <S.Check>
         <input
           type="checkbox"
           checked={todo.completed}
           onChange={() => toggleTodo(todo.id)}
         />
-        <span className="checkmark" />
-      </label>
+        <span />
+      </S.Check>
 
-      <span className={`todo-title ${todo.completed ? "done" : ""}`}>
+      <S.ItemTitle className={todo.completed ? "done" : ""}>
         {todo.title}
-      </span>
+      </S.ItemTitle>
 
-      <button className="btn delete" onClick={() => removeTodo(todo.id)}>
+      <S.DeleteButton
+        onClick={() => removeTodo(todo.id)}
+        aria-label="할 일 삭제"
+        title="삭제"
+      >
         삭제
-      </button>
-    </li>
+      </S.DeleteButton>
+    </S.ItemRow>
   );
 }
 

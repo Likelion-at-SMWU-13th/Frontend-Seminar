@@ -14,8 +14,9 @@ function App() {
     setNewTodo("");
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") handleAddTodo();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleAddTodo();
   };
 
   return (
@@ -25,17 +26,20 @@ function App() {
         <S.Card>
           <S.H1>투두리스트 ^_^</S.H1>
 
-          <S.Row>
-            <S.TextInput
-              type="text"
-              value={newTodo}
-              onChange={(e) => setNewTodo(e.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder="할 일을 추가해봐~"
-              aria-label="할 일 입력"
-            />
-            <S.PrimaryButton onClick={handleAddTodo}>할일추가</S.PrimaryButton>
-          </S.Row>
+          <form onSubmit={handleSubmit}>
+            <S.Row>
+              <S.TextInput
+                type="text"
+                value={newTodo}
+                onChange={(e) => setNewTodo(e.target.value)}
+                placeholder="할 일을 추가해봐~"
+                aria-label="할 일 입력"
+              />
+              <S.PrimaryButton type="submit" title="추가">
+                할일추가
+              </S.PrimaryButton>
+            </S.Row>
+          </form>
 
           <S.List>
             {todos.length === 0 ? (

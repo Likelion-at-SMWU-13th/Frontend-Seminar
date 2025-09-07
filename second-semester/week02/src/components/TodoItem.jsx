@@ -20,11 +20,7 @@ function TodoItem({ todo }) {
         {todo.title}
       </S.ItemTitle>
 
-      <S.DeleteButton
-        onClick={() => removeTodo(todo.id)}
-        aria-label="할 일 삭제"
-        title="삭제"
-      >
+      <S.DeleteButton onClick={() => removeTodo(todo.id)} title="삭제">
         삭제
       </S.DeleteButton>
     </S.ItemRow>

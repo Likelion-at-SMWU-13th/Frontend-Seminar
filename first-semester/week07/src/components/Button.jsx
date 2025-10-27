@@ -18,7 +18,7 @@ const ButtonContainer = styled.button`
   color: white;
   font-weight: 700;
   /* cursor: pointer; */
-  font-size: ${(props) => props.fontSize || "1.25rem"};
+  font-size: ${({ fontSize }) => fontSize ?? "1.25rem"};
   &:hover {
     background-color: var(--main-orange);
   }

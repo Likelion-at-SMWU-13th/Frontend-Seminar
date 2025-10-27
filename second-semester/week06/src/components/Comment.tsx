@@ -1,15 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import type { CommentItemType } from "../types/comment";
 
-const Comment = ({ comments }) => {
+interface CommentProps {
+  comments: CommentItemType[];
+}
+
+const Comment = ({ comments }: CommentProps) => {
   const navigate = useNavigate();
-  const handleClickComment = (id) => {
+  const handleClickComment = (id: CommentItemType["id"]) => {
     navigate(`/comment/${id}`);
   };
 
   return (
     <>
-      {comments.map((comment) => (
+      {comments.map((comment: CommentItemType) => (
         <CommentContainer
           key={comment.id}
           onClick={() => handleClickComment(comment.id)}
